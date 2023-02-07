@@ -45,14 +45,4 @@ ggplot(mis_datos2) +
   geom_text_repel(mapping = aes(coords_x, coords_y, label = NOMBRE), size = 2, colour="black")
 
 
-#otra opcion
-ggplot(mis_datos2) +
-  geom_sf(aes(fill = mis_datos2$Poblacion), color= "white")+
-  labs(title = "Poblacion Misiones Censo 2022",
-       caption = "Fuente: Elaboración propia en base a datos de INDEC",
-       x="Longitud",
-       y="Latitud")+
-  scale_fill_distiller(palette = "Spectral", guide_legend(title = "población censo 2022"))+
-  geom_text_repel(mapping = aes(coords_x, coords_y, label = NOMBRE), size = 2, colour="black")+
-  scale_fill
-  theme_void() #elimina latitud y longitud
+
